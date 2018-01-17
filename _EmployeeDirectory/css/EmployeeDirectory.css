@@ -1,0 +1,24 @@
+﻿/* Alpha links for search */
+#edir-alpha-links {
+	margin-top:10px;
+}
+#edir-alpha-links span {
+	padding:0 3px 0 3px;
+	width:35px;
+	font-size:18px;
+}
+#edir-alpha-links span.no-link {
+	padding:0 6px 0 6px;
+}
+#edir-alpha-links span a {
+	padding:0 3px 0 3px;
+	border-radius:6px 6px 6px 6px;
+	background-color:#005581;
+	color:#fff;
+}
+#edir-alpha-links span a.selected {
+	background-color:#E08B24;
+}
+/* Alpha links for search */
+
+
