@@ -37,13 +37,14 @@ _#-->
 		<div id="edir-alpha-links">
 			<span><a href=_#=thisPage=#_>All</a></span>
 <!--#_
+        // Get the Web Part's query from the ctx object os our tests for each letter take into account any exclusions
+		var thisQuery = ctx.ListData.Properties.SerializedQuery.match("QueryTemplate=[\"']([^'\"]+)")[1].replace("{searchboxquery} ", "").replace(/&quot;/g, "\"");
+
 		// Loop through the alphabet and make a call to the search API for each starting letter
 		for(var i=0; i < letters.length; i++) {
 			var searchTerm = letters[i];
-			var letterClass = (currentSearch === searchTerm) ? "selected" : "";		
-
-			// TODO Build the calls into one REST $batch. See: http://www.andrewconnell.com/blog/part-1-sharepoint-rest-api-batching-understanding-batching-requests
-			lettersSearch[i] = getSearchResultsUsingREST("LastName%3A" + searchTerm + "*");
+			var letterClass = (currentSearch === searchTerm) ? "selected" : "";
+			lettersSearch[i] = getSearchResultsUsingREST("LastName%3A" + searchTerm + "* " + thisQuery);
 _#-->
 			<span id="edir-alpha-links-_#= searchTerm =#_">
 				<a class="_#=letterClass=#_" href="_#= location.pathname =#_#k=lastname%3A_#= searchTerm =#_*">_#= searchTerm =#_</a>
