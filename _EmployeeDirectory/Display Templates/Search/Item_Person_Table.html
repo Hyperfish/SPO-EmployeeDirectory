@@ -25,7 +25,7 @@
 
 			// This is the best way to display the user photo - thanks to Mikael Svenson for the tip
 			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
-			var uPicUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
+			var userPhotoUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
 _#-->
 <!--#_
 			// If this is the first item in the results, emit the table header
@@ -46,7 +46,7 @@ _#-->
 			} 
 _#-->
 			<tr>
-				<td class="ms-vb2"><img src="_#= uPicUrl =#_"></td>
+				<td class="ms-vb2"><img src="_#= userPhotoUrl =#_"></td>
 				<td class="ms-vb2">
 					<a clicktype="Result" id="NameFieldLink" href="_#= encodedPath =#_" title="_#= ctx.CurrentItem.PreferredName =#_">_#= ctx.CurrentItem.PreferredName =#_</a>
 				</td>
