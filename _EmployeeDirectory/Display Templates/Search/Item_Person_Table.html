@@ -1,47 +1,64 @@
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
-	<title>People Search Table Item</title>
+<title>People Search Table Item</title>
 
-	<!--[if gte mso 9]><xml>
-	<mso:CustomDocumentProperties>
-		<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
-		<mso:MasterPageDescription msdt:dt="string">Displays a result tailored for a person.</mso:MasterPageDescription>
-		<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
-		<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
-		<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
-		<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
-		<mso:ManagedPropertyMapping msdt:dt="string">&#39;AboutMe&#39;:&#39;AboutMe&#39;,&#39;AccountName&#39;:&#39;AccountName&#39;,&#39;CostCenter&#39;:&#39;CostCenter&#39;,&#39;Office&#39;:&#39;OfficeNumber&#39;,&#39;Department&#39;:&#39;Department&#39;,&#39;HitHighlightedProperties&#39;:&#39;HitHighlightedProperties&#39;,&#39;Interests&#39;:&#39;Interests&#39;,&#39;JobTitle&#39;:&#39;JobTitle&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;Memberships&#39;:&#39;Memberships&#39;,&#39;PastProjects&#39;:&#39;PastProjects&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;PictureURL&#39;:&#39;PictureURL&#39;,&#39;PreferredName&#39;:&#39;PreferredName&#39;,&#39;Responsibilities&#39;:&#39;Responsibilities&#39;,&#39;Schools&#39;:&#39;Schools&#39;,&#39;ServiceApplicationID&#39;:&#39;ServiceApplicationID&#39;,&#39;SipAddress&#39;:&#39;SipAddress&#39;,&#39;Skills&#39;:&#39;Skills&#39;,&#39;UserProfile_GUID&#39;:&#39;UserProfile_GUID&#39;,&#39;WorkEmail&#39;:&#39;WorkEmail&#39;,&#39;WorkId&#39;:&#39;WorkId&#39;,&#39;WorkPhone&#39;:&#39;WorkPhone&#39;,&#39;YomiDisplayName&#39;:&#39;YomiDisplayName&#39;</mso:ManagedPropertyMapping>
-		<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
-		<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
-		<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://sympraxis.sharepoint.com/sites/ESC/_catalogs/masterpage/_EmployeeDirectory/Display Templates/Search/Item_Person_Table.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
-	</mso:CustomDocumentProperties>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
+<mso:MasterPageDescription msdt:dt="string">Displays a result tailored for a person.</mso:MasterPageDescription>
+<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
+<mso:TargetControlType msdt:dt="string">;#SearchResults;#</mso:TargetControlType>
+<mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+<mso:CrawlerXSLFile msdt:dt="string"></mso:CrawlerXSLFile>
+<mso:ManagedPropertyMapping msdt:dt="string">&#39;AboutMe&#39;:&#39;AboutMe&#39;,&#39;AccountName&#39;:&#39;AccountName&#39;,&#39;CostCenter&#39;:&#39;CostCenter&#39;,&#39;Office&#39;:&#39;OfficeNumber&#39;,&#39;Department&#39;:&#39;Department&#39;,&#39;HitHighlightedProperties&#39;:&#39;HitHighlightedProperties&#39;,&#39;Interests&#39;:&#39;Interests&#39;,&#39;JobTitle&#39;:&#39;JobTitle&#39;,&#39;LastModifiedTime&#39;:&#39;LastModifiedTime&#39;,&#39;Memberships&#39;:&#39;Memberships&#39;,&#39;PastProjects&#39;:&#39;PastProjects&#39;,&#39;Path&#39;:&#39;Path&#39;,&#39;PictureURL&#39;:&#39;PictureURL&#39;,&#39;PreferredName&#39;:&#39;PreferredName&#39;,&#39;Responsibilities&#39;:&#39;Responsibilities&#39;,&#39;Schools&#39;:&#39;Schools&#39;,&#39;ServiceApplicationID&#39;:&#39;ServiceApplicationID&#39;,&#39;SipAddress&#39;:&#39;SipAddress&#39;,&#39;Skills&#39;:&#39;Skills&#39;,&#39;UserProfile_GUID&#39;:&#39;UserProfile_GUID&#39;,&#39;WorkEmail&#39;:&#39;WorkEmail&#39;,&#39;WorkId&#39;:&#39;WorkId&#39;,&#39;WorkPhone&#39;:&#39;WorkPhone&#39;,&#39;YomiDisplayName&#39;:&#39;YomiDisplayName&#39;</mso:ManagedPropertyMapping>
+<mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+<mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://sympraxis.sharepoint.com/sites/ESC/_catalogs/masterpage/_EmployeeDirectory/Display Templates/Search/Item_Person_Table.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+</mso:CustomDocumentProperties>
 </xml><![endif]-->
 </head>
 <body>
-<div id="Item_Person">
-	<!--#_
-            if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
-                var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);
-                var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
-                // Use size M and 72px for medium instead of small
-                var picUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
-                var css = 'min-width: 48px;min-height: 48px;clip: rect(0px, 48px, 48px, 0px);max-width: 48px;';
-    _#-->
-	<tr>
-		<td class="ms-vb2"><img src="_#= picUrl =#_" style="_#= css =#_"></td>
-		<td class="ms-vb2">
-			<a clicktype="Result" id="NameFieldLink" href="_#= encodedPath =#_" title="_#= ctx.CurrentItem.PreferredName =#_">_#= ctx.CurrentItem.PreferredName =#_</a>
-		</td>
-		<td class="ms-vb2">_#=ctx.CurrentItem.WorkPhone=#_</td>
-		<td class="ms-vb2">
-			<a href="mailto:_#=ctx.CurrentItem.WorkEmail=#_">_#=ctx.CurrentItem.WorkEmail=#_</a>
-		</td>
-		<td class="ms-vb2">_#= ctx.CurrentItem.Department =#_</td>
-		<td class="ms-vb2">_#= ctx.CurrentItem.OfficeNumber =#_</td>
-	</tr>
-	<!--#_
-        }
-    _#-->
-</div>
+    <div id="Item_Person">
+<!--#_
+		if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
+			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);
+			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
+			// Use size M and 72px for medium instead of small
+			var picUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
+			var css = 'min-width: 48px;min-height: 48px;clip: rect(0px, 48px, 48px, 0px);max-width: 48px;';
+_#-->
+<!--#_
+			// If this is the first item in the results, emit the table header
+			if(ctx.CurrentItemIdx === 0) {
+_#-->
+				<thead>
+					<tr class="ms-viewheadertr ms-vhltr">
+						<td class="ms-vh2">Picture</td>
+						<td class="ms-vh2">Name</td>
+						<td class="ms-vh2">Work Phone</td>
+						<td class="ms-vh2">Email</td>
+						<td class="ms-vh2">Department</td>
+						<td class="ms-vh2">Office</td>
+					</tr>
+				</thead>
+<!--#_
+			}
+_#-->
+			<tr>
+				<td class="ms-vb2"><img src="_#= picUrl =#_" style="_#= css =#_"></td>
+				<td class="ms-vb2">
+					<a clicktype="Result" id="NameFieldLink" href="_#= encodedPath =#_" title="_#= ctx.CurrentItem.PreferredName =#_">_#= ctx.CurrentItem.PreferredName =#_</a>
+				</td>
+				<td class="ms-vb2">_#=ctx.CurrentItem.WorkPhone=#_</td>
+				<td class="ms-vb2">
+					<a href="mailto:_#=ctx.CurrentItem.WorkEmail=#_">_#=ctx.CurrentItem.WorkEmail=#_</a>
+				</td>
+				<td class="ms-vb2">_#= ctx.CurrentItem.Department =#_</td>
+				<td class="ms-vb2">_#= ctx.CurrentItem.OfficeNumber =#_</td>
+			</tr>
+<!--#_
+	}
+_#-->
+    </div>
 </body>
 </html>
