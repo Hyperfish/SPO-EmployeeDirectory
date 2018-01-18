@@ -21,7 +21,11 @@
     <div id="Item_Person">
 <!--#_ 
 		if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
-			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);                        
+			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);
+			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
+			// Use size M and 72px for medium instead of small
+			var picUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
+			var css = 'min-width: 48px;min-height: 48px;clip: rect(0px, 48px, 48px, 0px);max-width: 48px;';
 _#-->
 <!--#_
 			// If this is the first item in the results, emit the table header
@@ -29,18 +33,20 @@ _#-->
 _#-->
 				<thead>
 					<tr class="ms-viewheadertr ms-vhltr">
+						<td class="ms-vh2"></td>
 						<td class="ms-vh2">Name</td>
 						<td class="ms-vh2">Work Phone</td>
 						<td class="ms-vh2">Email</td>
 						<td class="ms-vh2">Department</td>
 						<td class="ms-vh2">Office</td>
-						<td class="ms-vh2"> Cost Center</td>
+						<td class="ms-vh2">Cost Center</td>
 					</tr>
 				</thead>
 <!--#_ 
 			} 
 _#-->
 			<tr>
+				<td class="ms-vb2"><img src="_#= picUrl =#_" style="style="_# css #_"></td>
 				<td class="ms-vb2">
 					<a clicktype="Result" id="NameFieldLink" href="_#= encodedPath =#_" title="_#= ctx.CurrentItem.PreferredName =#_">_#= ctx.CurrentItem.PreferredName =#_</a>
 				</td>
