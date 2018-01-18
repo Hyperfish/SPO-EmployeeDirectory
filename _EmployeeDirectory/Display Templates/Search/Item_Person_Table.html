@@ -1,4 +1,4 @@
-﻿﻿<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
 <head>
 <title>People Search Table Item</title>
 
@@ -21,11 +21,9 @@
     <div id="Item_Person">
 <!--#_ 
 		if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
-			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);
-
-			// This is the best way to display the user photo - thanks to Mikael Svenson for the tip
-			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
-			var userPhotoUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
+			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);      
+			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);              
+			var uPicUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
 _#-->
 <!--#_
 			// If this is the first item in the results, emit the table header
@@ -46,7 +44,7 @@ _#-->
 			} 
 _#-->
 			<tr>
-				<td class="ms-vb2"><img src="_#= userPhotoUrl =#_"></td>
+				<td class="ms-vb2"> <img src="_#= uPicUrl =#_" width="43px" height="43px"> </td>
 				<td class="ms-vb2">
 					<a clicktype="Result" id="NameFieldLink" href="_#= encodedPath =#_" title="_#= ctx.CurrentItem.PreferredName =#_">_#= ctx.CurrentItem.PreferredName =#_</a>
 				</td>
