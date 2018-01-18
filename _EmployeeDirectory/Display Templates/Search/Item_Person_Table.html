@@ -1,4 +1,4 @@
-<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
 <head>
 <title>People Search Table Item</title>
 
@@ -19,9 +19,9 @@
 </head>
 <body>
     <div id="Item_Person">
-<!--#_ 
+<!--#_
 		if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
-			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);      
+			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);
 			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
 			// Use size M and 72px for medium instead of small
 			var picUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
@@ -41,8 +41,8 @@ _#-->
 						<td class="ms-vh2">Office</td>
 					</tr>
 				</thead>
-<!--#_ 
-			} 
+<!--#_
+			}
 _#-->
 			<tr>
 				<td class="ms-vb2"><img src="_#= picUrl =#_" style="_#= css =#_"></td>
@@ -56,8 +56,8 @@ _#-->
 				<td class="ms-vb2">_#= ctx.CurrentItem.Department =#_</td>
 				<td class="ms-vb2">_#= ctx.CurrentItem.OfficeNumber =#_</td>
 			</tr>
-<!--#_ 
-	} 
+<!--#_
+	}
 _#-->
     </div>
 </body>
