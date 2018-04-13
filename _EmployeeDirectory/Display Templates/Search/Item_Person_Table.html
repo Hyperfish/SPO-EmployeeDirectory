@@ -23,8 +23,8 @@
 		if(!$isNull(ctx.CurrentItem) && !$isNull(ctx.ClientControl)){
 			var encodedPath = $urlHtmlEncode(ctx.CurrentItem.Path);      
 			var accountName = ctx.CurrentItem.AccountName.substr(ctx.CurrentItem.AccountName.lastIndexOf('|') + 1);
-			// Use size M and 72px for medium instead of small
-			var picUrl = '/_layouts/15/userphoto.aspx?size=S&accountname=' + accountName;
+			// Use size M and 72px for medium instead of small			
+			var picUrl = '/_vti_bin/DelveApi.ashx/people/profileimage?size=S&userId=' + accountName;
 			var css = 'min-width: 48px;min-height: 48px;clip: rect(0px, 48px, 48px, 0px);max-width: 48px;';
 _#-->
 <!--#_
